@@ -1,0 +1,52 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                  Bucket_01.jpg  label:                     bucket
+ 2 key:                  Beagle_01.jpg  label:                     beagle
+ 3 key:                    Bear_01.jpg  label:                       bear
+ 4 key:                  Beagle_02.jpg  label:                     beagle
+
+     MATCH:
+
+                 Bucket_01.jpg: 
+Real:                     bucket   Classifier:                   bucket, pail
+
+                 Beagle_01.jpg: 
+Real:                     beagle   Classifier:                         beagle
+
+                   Bear_01.jpg: 
+Real:                       bear   Classifier: brown bear, bruin, ursus arctos
+
+                 Beagle_02.jpg: 
+Real:                     beagle   Classifier:                         beagle
+
+ NOT A MATCH:
+
+# Total Images 4 # Matches: 4 # NOT Matches: 0
+{'Bucket_01.jpg': ['bucket', 'bucket, pail', 1, 0, 0], 'Beagle_01.jpg': ['beagle', 'beagle', 1, 1, 1], 'Bear_01.jpg': ['bear', 'brown bear, bruin, ursus arctos', 1, 0, 0], 'Beagle_02.jpg': ['beagle', 'beagle', 1, 1, 1]}
+
+     MATCH:
+
+                 Bucket_01.jpg: 
+Real:                     bucket   Classifier:                   bucket, pail  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                 Beagle_01.jpg: 
+Real:                     beagle   Classifier:                         beagle  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                   Bear_01.jpg: 
+Real:                       bear   Classifier: brown bear, bruin, ursus arctos  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                 Beagle_02.jpg: 
+Real:                     beagle   Classifier:                         beagle  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+# Total Images 4 # Matches: 4 # NOT Matches: 0

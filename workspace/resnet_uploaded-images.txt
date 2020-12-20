@@ -1,0 +1,52 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = resnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                  Bucket_01.jpg  label:                     bucket
+ 2 key:                  Beagle_01.jpg  label:                     beagle
+ 3 key:                    Bear_01.jpg  label:                       bear
+ 4 key:                  Beagle_02.jpg  label:                     beagle
+
+     MATCH:
+
+                 Bucket_01.jpg: 
+Real:                     bucket   Classifier:                   bucket, pail
+
+                   Bear_01.jpg: 
+Real:                       bear   Classifier: brown bear, bruin, ursus arctos
+
+ NOT A MATCH:
+
+                 Beagle_01.jpg: 
+Real:                     beagle   Classifier:               english foxhound
+
+                 Beagle_02.jpg: 
+Real:                     beagle   Classifier:               english foxhound
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+{'Bucket_01.jpg': ['bucket', 'bucket, pail', 1, 0, 0], 'Beagle_01.jpg': ['beagle', 'english foxhound', 0, 1, 1], 'Bear_01.jpg': ['bear', 'brown bear, bruin, ursus arctos', 1, 0, 0], 'Beagle_02.jpg': ['beagle', 'english foxhound', 0, 1, 1]}
+
+     MATCH:
+
+                 Bucket_01.jpg: 
+Real:                     bucket   Classifier:                   bucket, pail  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                   Bear_01.jpg: 
+Real:                       bear   Classifier: brown bear, bruin, ursus arctos  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                 Beagle_01.jpg: 
+Real:                     beagle   Classifier:               english foxhound  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                 Beagle_02.jpg: 
+Real:                     beagle   Classifier:               english foxhound  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
